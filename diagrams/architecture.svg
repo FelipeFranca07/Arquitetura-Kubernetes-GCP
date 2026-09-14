@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-label="Tráfego da internet passa por regras de firewall anexadas à VPC, depois pelo Cloud Load Balancing, que distribui para as sub-redes pública e privada. A sub-rede privada hospeda o node pool do GKE, que lê e escreve em Cloud SQL, GCS e Firestore. Separadamente, a VPC se conecta a um hub de peering, que é o único caminho amarelo de saída para outras VPCs ou on-premises.">
+  <rect x="0" y="0" width="1000" height="600" fill="#0B3855"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#BFE6F5"/>
+    </marker>
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:#F0A93B"/>
+    </marker>
+  </defs>
+
+  <rect x="380" y="24" width="160" height="50" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="460" y="54" text-anchor="middle" font-size="13" fill="#BFE6F5">Internet</text>
+
+  <line x1="460" y1="74" x2="460" y2="104" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <text x="470" y="94" font-size="11" fill="#BFE6F5" opacity="0.85">tráfego público</text>
+
+  <rect x="320" y="108" width="280" height="56" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="460" y="132" text-anchor="middle" font-size="13" fill="#BFE6F5">Firewall Rules</text>
+  <text x="460" y="149" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">regras anexadas à VPC</text>
+
+  <line x1="460" y1="164" x2="460" y2="194" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <text x="470" y="184" font-size="11" fill="#BFE6F5" opacity="0.85">permitido pela regra</text>
+
+  <rect x="320" y="198" width="280" height="56" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="460" y="222" text-anchor="middle" font-size="13" fill="#BFE6F5">Cloud Load Balancing</text>
+  <text x="460" y="239" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">backend service + forwarding rule</text>
+
+  <line x1="460" y1="254" x2="460" y2="278" stroke="#BFE6F5"/>
+  <line x1="460" y1="278" x2="220" y2="300" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <line x1="460" y1="278" x2="700" y2="300" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <text x="470" y="274" font-size="11" fill="#BFE6F5" opacity="0.85">distribui tráfego</text>
+
+  <rect x="80" y="300" width="280" height="54" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="220" y="323" text-anchor="middle" font-size="13" fill="#BFE6F5">Subnet pública</text>
+  <text x="220" y="340" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">10.0.1.0/24</text>
+
+  <rect x="560" y="300" width="280" height="54" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="700" y="323" text-anchor="middle" font-size="13" fill="#BFE6F5">Subnet privada</text>
+  <text x="700" y="340" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">10.0.2.0/24</text>
+
+  <line x1="700" y1="354" x2="700" y2="392" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <text x="712" y="378" font-size="11" fill="#BFE6F5" opacity="0.85">nós sem IP público</text>
+
+  <rect x="560" y="396" width="280" height="56" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="700" y="420" text-anchor="middle" font-size="13" fill="#BFE6F5">GKE — node pool</text>
+  <text x="700" y="437" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">cluster privado</text>
+
+  <line x1="640" y1="452" x2="530" y2="500" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <line x1="700" y1="452" x2="700" y2="500" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <line x1="760" y1="452" x2="870" y2="500" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <text x="470" y="486" font-size="11" fill="#BFE6F5" opacity="0.85">dados relacionais</text>
+  <text x="704" y="486" font-size="11" fill="#BFE6F5" opacity="0.85">objetos estáticos</text>
+  <text x="790" y="486" font-size="11" fill="#BFE6F5" opacity="0.85">documentos</text>
+
+  <rect x="425" y="504" width="170" height="56" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="510" y="528" text-anchor="middle" font-size="13" fill="#BFE6F5">Cloud SQL</text>
+  <text x="510" y="545" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">postgres</text>
+
+  <rect x="615" y="504" width="170" height="56" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="700" y="528" text-anchor="middle" font-size="13" fill="#BFE6F5">GCS</text>
+  <text x="700" y="545" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">assets estáticos</text>
+
+  <rect x="805" y="504" width="170" height="56" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="890" y="528" text-anchor="middle" font-size="13" fill="#BFE6F5">Firestore</text>
+  <text x="890" y="545" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">sessões/docs</text>
+
+  <path d="M 320,136 L 20,136 L 20,424 L 40,424" fill="none" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <text x="26" y="130" font-size="11" fill="#BFE6F5" opacity="0.75">nível de VPC</text>
+
+  <rect x="40" y="396" width="220" height="56" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="150" y="420" text-anchor="middle" font-size="13" fill="#BFE6F5">VPC Peering — Hub</text>
+  <text x="150" y="437" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">network_peering</text>
+
+  <line x1="150" y1="452" x2="150" y2="500" style="stroke:#F0A93B" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <text x="164" y="478" font-size="11" style="fill:#F0A93B">rota compartilhada</text>
+  <text x="164" y="493" font-size="11" style="fill:#F0A93B">entre VPCs</text>
+
+  <rect x="40" y="504" width="220" height="56" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="150" y="528" text-anchor="middle" font-size="13" fill="#BFE6F5">VPC Hub / outras VPCs</text>
+  <text x="150" y="545" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">on-premises</text>
+</svg>
