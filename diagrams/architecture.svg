@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-label="Tráfego da internet passa por regras de firewall anexadas à VPC, depois pelo Cloud Load Balancing, que distribui para as sub-redes pública e privada. A sub-rede privada hospeda o node pool do GKE, que lê e escreve em Cloud SQL, GCS e Firestore. Separadamente, a VPC se conecta a um hub de peering, que é o único caminho amarelo de saída para outras VPCs ou on-premises.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img" aria-label="Tráfego da internet passa por regras de firewall anexadas à VPC, depois pelo Cloud Load Balancing, que distribui para as sub-redes pública e privada. A sub-rede privada hospeda o node pool do GKE, que lê e escreve em Cloud SQL, GCS e Firestore. Separadamente, a VPC se conecta a um hub de peering, que é o único caminho amarelo de saída para outras VPCs ou on-premises.">
   <rect x="0" y="0" width="1000" height="600" fill="#0B3855"/>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
