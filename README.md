@@ -142,3 +142,4 @@ Firestore em modo nativo cobre sessões e documentos que não precisam de schema
 ## Aviso
 
 O console do Google Cloud muda de layout e nomenclatura com alguma frequência. Se um item não estiver exatamente onde este guia descreve, a sequência lógica (rede → firewall → load balancer → peering → GKE → dados) continua valendo — procure pelo nome do serviço na busca do console.
+
